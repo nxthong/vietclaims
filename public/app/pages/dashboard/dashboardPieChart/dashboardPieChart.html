@@ -1,0 +1,47 @@
+<!--<h1>VIET CLAIM Code update</h1>-->
+
+<!--<div class="row pie-charts">-->
+<!--  <div class="pie-chart-item-container" ng-repeat="chart in charts">-->
+<!--    <div ba-panel>-->
+<!--      <div class="pie-chart-item">-->
+<!--        <div class="chart" rel="{{ ::chart.color }}" data-percent="60"> <span class="percent"></span> </div>-->
+<!--        <div class="description">-->
+<!--          <div>{{ ::chart.description }}</div>-->
+<!--          <div class="description-stats">{{ ::chart.stats }}</div>-->
+<!--        </div>-->
+<!--        <i class="chart-icon i-{{ ::chart.icon }}"></i>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+
+
+<h1>Viet Claim</h1>
+
+
+<form ng-submit="submit()">
+    <div style="display: table; margin: auto;"
+        vc-recaptcha
+        theme="'light'"
+        key="model.key"
+        on-create="setWidgetId(widgetId)"
+        on-success="setResponse(response)"
+        on-expire="cbExpiration()"
+    ></div>
+    <center>
+      <input type="text" class="form-control" id="input01" value="xrb_1hmgysjeeyd6rxt8g7bmtq6chis3ghqxkpr6nna16qxnphekofe7hqxoaiwy" placeholder="Please Enter Your RaiBlock ID..." style="margin: 24px; width: 600px;">
+      <button progress-button="progressFunction()" pb-direction="vertical" class="btn btn-danger" type="submit">Submit</button><br>
+      <div style="margin: 24px;">
+        <button type="button" class="btn btn-warning btn-with-icon"><i class="ion-android-warning"></i>{{pending}} Warning</button>
+        <button type="button" class="btn btn-success btn-with-icon"><i class="ion-android-checkmark-circle"></i>{{success}} Success</button>
+      </div>
+      
+    </center>
+</form>
+
+<!--<button-->
+<!--class="g-recaptcha"-->
+<!--data-sitekey="6LeQRh8UAAAAAEMlLM_WyHTjxO2d8Rh9OvG0LR0u"-->
+<!--data-callback="YourOnSubmitFn">-->
+<!--Submit-->
+<!--</button>-->
